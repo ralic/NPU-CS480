@@ -25,15 +25,15 @@ public class CS480G13108Weishun_wk3 {
             IntList[i] = (int) (Math.random() * 100);
             System.out.println("Integer[" + i + "] is " + IntList[i]);
         }
-        int avgINT = (int) (average(IntList));
+        int avgINT = (average(IntList));
         System.out.println("Average of Integer numbers is " + avgINT + "\n");
 
         double[] DoubleList = new double[10];
         for (i = 0; i < 10; i++) {
-            DoubleList[i] = (double) (Math.random() * 50);
+            DoubleList[i] = (Math.random() * 50);
             System.out.printf("Double[%d] is %3.2f\n", i, DoubleList[i]);
         }
-        double avgDouble = (double) (average(DoubleList));
+        double avgDouble = (average(DoubleList));
         System.out.printf("Average of Double numbers is %3.2f\n", avgDouble);
 
     }
@@ -54,10 +54,10 @@ public class CS480G13108Weishun_wk3 {
         int i = 0;
         double sum = 0;
         for (i = 0; i < array.length; i++) {
-            sum = sum + array[i];
+            sum += array[i];
         }
         //System.out.println("Sum is " + sum);
-        double avg = (double) (sum / 10);
+        double avg = (sum / 10);
         //System.out.println("Avg is " + avg);
         return avg;
     }

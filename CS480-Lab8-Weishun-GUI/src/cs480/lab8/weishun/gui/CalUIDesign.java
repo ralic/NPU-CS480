@@ -146,7 +146,7 @@ public class CalUIDesign extends JFrame {
         private void CheckOperation(String text) throws Exception {
             double a = Double.parseDouble(getJtxf1().getText());
             double b = Double.parseDouble(getJtxf2().getText());
-            setResult((Double) a + b);
+            setResult(a + b);
             getJtxf3().setText(getResult().toString());
         }
     }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Final">
+  <ClassDiagramComponents>
+    <Interface name="IPrintable" package="" visibility="public" xPosition="88.0" yPosition="90.0">
+      <Methods>
+        <Method name="display" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Inputable" package="" visibility="public" xPosition="324.0" yPosition="90.0">
+      <Methods>
+        <Method name="getInput" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Person" package="" visibility="public" xPosition="203.0" yPosition="209.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Person" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Person" target="Inputable"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Person" target="IPrintable"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

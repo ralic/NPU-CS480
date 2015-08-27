@@ -5,13 +5,9 @@
  */
 package cs480.lab8.weishun.gui;
 
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,11 +19,25 @@ import javax.swing.JTextField;
  */
 public class CalUIDesign extends JFrame {
 
-    public static Double result;
-    public JTextField jtxf1;
-    public JTextField jtxf2;
-    public JTextField jtxf3;
-    public JLabel jlb1;
+    private static Double result;
+
+    /**
+     * @return the result
+     */
+    public static Double getResult() {
+        return result;
+    }
+
+    /**
+     * @param aResult the result to set
+     */
+    public static void setResult(Double aResult) {
+        result = aResult;
+    }
+    private JTextField jtxf1;
+    private JTextField jtxf2;
+    private JTextField jtxf3;
+    private JLabel jlb1;
 
     public CalUIDesign() {
 //        GridLayout gl1 = new GridLayout(0, 5, 0, 0);
@@ -51,6 +61,62 @@ public class CalUIDesign extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(true);
+    }
+
+    /**
+     * @return the jtxf1
+     */
+    public JTextField getJtxf1() {
+        return jtxf1;
+    }
+
+    /**
+     * @param jtxf1 the jtxf1 to set
+     */
+    public void setJtxf1(JTextField jtxf1) {
+        this.jtxf1 = jtxf1;
+    }
+
+    /**
+     * @return the jtxf2
+     */
+    public JTextField getJtxf2() {
+        return jtxf2;
+    }
+
+    /**
+     * @param jtxf2 the jtxf2 to set
+     */
+    public void setJtxf2(JTextField jtxf2) {
+        this.jtxf2 = jtxf2;
+    }
+
+    /**
+     * @return the jtxf3
+     */
+    public JTextField getJtxf3() {
+        return jtxf3;
+    }
+
+    /**
+     * @param jtxf3 the jtxf3 to set
+     */
+    public void setJtxf3(JTextField jtxf3) {
+        this.jtxf3 = jtxf3;
+    }
+
+    /**
+     * @return the jlb1
+     */
+    public JLabel getJlb1() {
+        return jlb1;
+    }
+
+    /**
+     * @param jlb1 the jlb1 to set
+     */
+    public void setJlb1(JLabel jlb1) {
+        this.jlb1 = jlb1;
     }
 
     //interactive Button
@@ -78,10 +144,10 @@ public class CalUIDesign extends JFrame {
         }
 
         private void CheckOperation(String text) throws Exception {
-            double a = Double.parseDouble(jtxf1.getText());
-            double b = Double.parseDouble(jtxf2.getText());
-            result = a + b;
-            jtxf3.setText(result.toString());
+            double a = Double.parseDouble(getJtxf1().getText());
+            double b = Double.parseDouble(getJtxf2().getText());
+            setResult((Double) a + b);
+            getJtxf3().setText(getResult().toString());
         }
     }
 }

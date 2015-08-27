@@ -42,10 +42,10 @@ public class CS480G13108Weishun_wk3 {
         int i = 0;
         int sum = 0;
         for (i = 0; i < array.length; i++) {
-            sum = sum + array[i];
+            sum += array[i];
         }
         //System.out.println("Sum is " + sum);
-        int avg = (int) (sum / 10);
+        int avg = (sum / 10);
         //System.out.println("Avg is " + avg);
         return avg;
     }

@@ -19,17 +19,16 @@ public class CS480GHomework {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         // TODO code application logic here
         Scanner in = new Scanner(System.in);
-        String FN,LN;
+        String FN, LN;
         System.out.println("What is your First name ?");
         FN = in.nextLine();
         System.out.println("What is your Last  name ?");
         LN = in.nextLine();
         Component frame = null;
-        JOptionPane.showMessageDialog(frame, "[" + FN +"], [" + LN+ "], Welcome to Java!!",
-        "Week 1 Assignment",JOptionPane.PLAIN_MESSAGE);
-    } }
-  }
+        JOptionPane.showMessageDialog(frame, "[" + FN + "], [" + LN + "], Welcome to Java!!",
+                "Week 1 Assignment", JOptionPane.PLAIN_MESSAGE);
+    }
 }

@@ -9,9 +9,7 @@ package cs480.wk12.pkg13108.weishun;
  *
  * @author raliclo
  */
-public class ClonableAccount extends ComparableAccount implements Cloneable
-
-    throws CloneNotSupportedException {
+public class ClonableAccount extends ComparableAccount implements Cloneable {
 
     public ClonableAccount() throws CloneNotSupportedException {
         this.clone();

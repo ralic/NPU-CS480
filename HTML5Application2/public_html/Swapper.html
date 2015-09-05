@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="js/libs/angular-ui/angular-ui.css" type="text/css"/>
+
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function swapper() {
+                toggleClass(document.getElementById('overlay'), 'open');
+            }
+
+            var el = document.getElementById('overlayBtn');
+            el.addEventListener('click', swapper, false);
+
+            var text = document.getElementById('overlayBtn');
+            text.onclick = function () {
+                this.innerHTML = (this.innerHTML === "Menu") ? "Close" : "Menu";
+                return false;
+            };
+        </script>
+    </head>
+    <body>
+        <button id="overlayBtn">Overlay</button>
+        <div>TODO write content</div>
+    </body>
+</html>

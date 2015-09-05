@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function addListeners() {
+                var eList = new Array('english', 'german', 'tagalog', 'russian', 'spanish', 'french');
+                var el;
+                for (i = 0, i < eList.length; i++) {
+                    el = document.getElementById(eList[i] + '_button');
+                    if (window.addEventListener) {
+                        el.addEventListener('mouseover', imgSwitch(eList[i], '02'), false);
+                        el.addEventListener('mouseout', imgSwitch(eList[i], '01'), false);
+                        el.addEventListener('mousedown', imgSwitch(eList[i], '03'), false);
+                        el.addEventListener('mouseup', imgSwitch(eList[i], '01'), false);
+                    } else if (window.attachEvent) {
+                        el.attachEvent('onmouseover', imgSwitch(eList[i], '02'));
+                        el.attachEvent('onmouseout', imgSwitch(eList[i], '01'));
+                        el.attachEvent('onmousedown', imgSwitch(eList[i], '03'));
+                        el.attachEvent('onmouseup', imgSwitch(eList[i], '01'));
+                    } // endif addEventListener
+                } // end for i
+            } // end addListeners()
+
+            function imgSwitch(elName, imgNum) {
+                document.getElementById(elName + '_button').src = elName.charAt(0).toUpperCase() + elName.slice(1) + '_' + imgNum + '.jpg';
+            }
+
+            if (window.addEventListener) { // W3C standard
+                window.addEventListener('load', addListeners, false);
+            } else if (window.attachEvent) { // MSIE < 9
+                window.attachEvent('onload', addListeners);
+            }
+
+            function addListeners2() {
+                document.getElementById('english_button').addEventListener("mouseover", myfuncE, false);
+                document.getElementById('english_button').addEventListener("mouseout", myfuncE, false);
+                document.getElementById('english_button').addEventListener("mousedown", myfuncE, false);
+                document.getElementById('english_button').addEventListener("mouseup", myfuncE, false);
+
+                document.getElementById('german_button').addEventListener("mouseover", myfuncG, false);
+                document.getElementById('german_button').addEventListener("mouseout", myfuncG, false);
+                document.getElementById('german_button').addEventListener("mousedown", myfuncG, false);
+                document.getElementById('german_button').addEventListener("mouseup", myfuncG, false);
+
+                document.getElementById('tagalog_button').addEventListener("mouseover", myfuncT, false);
+                document.getElementById('tagalog_button').addEventListener("mouseout", myfuncT, false);
+                document.getElementById('tagalog_button').addEventListener("mousedown", myfuncT, false);
+                document.getElementById('tagalog_button').addEventListener("mouseup", myfuncT, false);
+
+                document.getElementById('russian_button').addEventListener("mouseover", myfuncR, false);
+                document.getElementById('russian_button').addEventListener("mouseout", myfuncR, false);
+                document.getElementById('russian_button').addEventListener("mousedown", myfuncR, false);
+                document.getElementById('russian_button').addEventListener("mouseup", myfuncR, false);
+
+                document.getElementById('spanish_button').addEventListener("mouseover", myfuncS, false);
+                document.getElementById('spanish_button').addEventListener("mouseout", myfuncS, false);
+                document.getElementById('spanish_button').addEventListener("mousedown", myfuncS, false);
+                document.getElementById('spanish_button').addEventListener("mouseup", myfuncS, false);
+
+                document.getElementById('french_button').addEventListener("mouseover", myfuncF, false);
+                document.getElementById('french_button').addEventListener("mouseout", myfuncF, false);
+                document.getElementById('french_button').addEventListener("mousedown", myfuncF, false);
+                document.getElementById('french_button').addEventListener("mouseup", myfuncF, false);
+
+                function myfuncE(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'English_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'English_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'English_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'English_01.jpg';
+                    }
+                }
+                function myfuncG(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'German_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'German_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'German_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'German_01.jpg';
+                    }
+                }
+                function myfuncT(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'Tagalog_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'Tagalog_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'Tagalog_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'Tagalog_01.jpg';
+                    }
+                }
+                function myfuncR(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'Russian_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'Russian_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'Russian_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'Russian_01.jpg';
+                    }
+                }
+                function myfuncS(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'Spanish_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'Spanish_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'Spanish_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'Spanish_01.jpg';
+                    }
+                }
+                function myfuncF(event) {
+                    if (event.type == "mouseover") {
+                        this.src = 'French_02.jpg';
+                    }
+                    if (event.type == "mouseout") {
+                        this.src = 'French_01.jpg';
+                    }
+                    if (event.type == "mousedown") {
+                        this.src = 'French_03.jpg';
+                    }
+                    if (event.type == "mouseup") {
+                        this.src = 'French_01.jpg';
+                    }
+                }
+            }
+            window.onload = addListeners;
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

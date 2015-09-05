@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<!-- HTML5 -->
+<!--        <script src="javascript.js">
+            element = document.getElementById(id)
+        </script>-->
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="js/libs/angular-ui/angular-ui.css" type="text/css"/>
+
+        <title>My first Java Script Page</title>  <!--標題-->
+
+        <meta charset="UTF-8">
+        <script id='script2'>
+            function changeColor(newColor) {
+                var elem = document.getElementById("para1");
+                elem.style.color = newColor;
+            }
+        </script>
+        <!--        <script id='script3' type="text/javascript">
+                    function message() {
+                        alert("Hello!");
+                    }
+                    var button = document.getElementById("button1");
+                    button.addEventListener('click', message, true);
+                </script>-->
+    </head>
+    <body>
+        <h1>My first Java Script HTML</h1>
+        <br>
+        <button id="enlarge"> Enlarge Size</button>
+        <button id="decrease"> Decrease Size</button>
+        <button id="back" onclick="reset()"> Back to Original </button>
+        <br>
+        <img id="image1" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRJnL5igxe0cbVXfKFRru_4AhveDBDF3XSydUoPLdBvFb0I6AXB" alt="Apple Picture" height="200" width="200" >
+        <script id="ChangeImage" src='./ChangeImage.js'></script>
+        <script id="IncreaseDecrease" src="./IncreaseDecrease.js"></script>
+        <br>
+        <p id="para1">Change Paragraph Color</p>
+        <button onclick="changeColor('blue');">blue</button>
+        <button onclick="changeColor('red');">red</button>
+        <input type="button" id="button1" value="Click me!" />
+
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        </script>
+        <!--
+             <br>
+             <img id="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncMN4h3GVpeqeS1FdD1wFEwt7cZnb-Vs6lPBlN9kqeB--CzBW5Q" alt="Pine Apple Picture" height="200" width="200">-->
+
+        Class Notes :
+
+        <h1><u>Java Script DataTypes</u></h1>
+        <p>
+            Variables :
+            In JavaScript there are 5 different data types that can contain values:
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>object</li>
+            <li>function</li>
+        </ul>
+        <br>There are 3 types of objects:
+        <ul>
+            <li>Object</li>
+            <li>Date</li>
+            <li>Array</li>
+        </ul>
+        <br>And 2 data types that cannot contain values:
+        <ul>
+            <li>null</li>
+            <li>undefined</li>
+        </ul>
+    </p>
+
+    <h1><u>Global vs Function variable</u></h1>
+    <p>
+        <br> --If you assign a value to a variable that has not been declared, it will automatically become a <b> GLOBAL</b> variable:
+        <br> --In HTML, the global scope is the <b>window object</b>. All global variables belong to the window object.
+        <br><a href="http://www.w3schools.com/js/js_scope.asp"> http://www.w3schools.com/js/js_scope.asp</a>
+    </p>
+    <h1><u>JavaScript Hoisting</u></h1>
+    <p>
+        <br>In JavaScript, a variable can be declared after it has been used.
+        <br>Declare Your Variables At the Top !
+        <br><br>This is because only the declaration (var y), not the initialization (=7) is hoisted to the top.
+        <br>Because of hoisting, y has been declared before it is used, but because initializations are not hoisted, the value of y is undefined.
+        <br><br>Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
+        <br>If a developer doesn't understand hoisting, programs may contain bugs (errors).
+        <br>To avoid bugs, always declare all variables at the beginning of every scope.
+        <br>Since this is how JavaScript interprets the code, it is always a good rule.
+        <br><a href="http://www.w3schools.com/js/js_hoisting.asp">http://www.w3schools.com/js/js_hoisting.asp</a>
+    </p>
+
+    <table class="reference notranslate">
+        <tr>
+            <th style="width:25%">Operator</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Addition</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Division</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Modulus</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td>Increment</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>Decrement</td>
+        </tr>
+    </table>
+    <div class="table-responsive">
+        <table class="reference notranslate">
+            <tr>
+                <th style="width:12%">Operator</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>equal to</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>equal value and equal type</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>not equal</td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>not equal value or not equal type</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>greater than</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>less than</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>greater than or equal to</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>less than or equal to</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
